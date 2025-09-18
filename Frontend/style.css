@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap'); /* Importa duas famílias de fontes do Google Fonts para usar nos textos do site */
+
+/* Seleciona todos os elementos da página */
+* {
+  margin: 0; /* Remove todas as margens externas padrão dos elementos */
+  padding: 0; /* Remove todos os espaçamentos internos padrão */
+  box-sizing: border-box; /* Faz com que largura/altura inclua borda e padding */
+  text-decoration: none; /* Remove sublinhado de todos os textos/links */
+}
+
+body {
+  font-size: 100%; /* Define tamanho de fonte padrão (igual ao navegador) */
+  background: linear-gradient(68.15deg, #222020 16.62%, #000000 85.61%); /* Fundo degrade escuro para o site */
+}
+
+/* Estiliza todas as imagens da página para serem responsivas */
+img {
+  max-width: 100%; /* Imagem nunca será maior que o elemento pai */
+  height: auto; /* Altura automática para manter proporção */
+}
+
+/* Estiliza o cabeçalho do site */
+.cabecalho {
+  display: flex; /* Ativa modelo de layout flexível */
+  flex-direction: row; /* Alinha os itens em linha horizontal */
+  align-items: center; /* Centraliza verticalmente os itens */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  padding: 24px 5vw 24px 5vw; /* Espaço interno acima/abaixo 24px, lados 5% da largura da tela */
+  width: 100%; /* Ocupa largura total */
+}
+
+/* Estiliza a imagem do logo no cabeçalho */
+.cabecalho-imagem {
+  height: 72px; /* Altura fixa do logo */
+  margin-right: 32px; /* Espaço à direita do logo para separar do menu */
+}
+
+/* Estiliza a área de navegação do menu */
+.cabecalho-menu {
+  display: flex; /* Layout flexível para os links do menu */
+  gap: 32px; /* Espaçamento horizontal entre links */
+  margin-left: auto; /* Empurra o menu para a direita */
+}
+
+/* Estiliza cada item do menu de navegação */
+.cabecalho-menu-item {
+  font-family: 'Sarala', sans-serif; /* Fonte personalizada */
+  color: #e76c07; /* Cor laranja */
+  font-weight: 400; /* Peso normal da fonte */
+  font-size: 18px; /* Tamanho médio do texto */
+  transition: color 0.2s; /* Suaviza troca de cor ao passar mouse */
+}
+
+/* Efeito ao passar mouse sobre o menu */
+.cabecalho-menu-item:hover {
+  color: #ffd19c; /* Muda cor do texto para um laranja mais claro */
+}
+
+/* Área principal do conteúdo abaixo do cabeçalho */
+.conteudo {
+  margin-bottom: 48px; /* Espaço abaixo do conteúdo principal */
+  border-top: 0.4px solid #e76c07; /* Linha laranja fina no topo */
+  width: 100%; /* Ocupa largura total */
+}
+
+/* Seção principal: nome, frase, botão e imagem */
+.conteudo-principal {
+  display: flex; /* Layout flexível horizontal */
+  flex-direction: row; /* Elementos lado a lado */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 56px; /* Espaço entre texto e imagem */
+  width: 100%; /* Largura total */
+  padding: 48px 5vw; /* Espaço interno acima/abaixo 48px, lados 5% */
+}
+
+/* Bloco do texto principal, centralizado */
+.conteudo-principal-escrito {
+  display: flex; /* Layout flexível vertical */
+  flex-direction: column; /* Elementos em coluna */
+  gap: 32px; /* Espaço entre título, frase e botão */
+  max-width: 500px; /* Limite de largura para não ficar muito largo */
+  width: 100%; /* Ocupa toda a largura do espaço */
+  align-items: center; /* Centraliza horizontalmente os itens */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Título principal (nome) */
+.conteudo-principal-escrito-titulo {
+  font-family: 'Righteous', cursive; /* Fonte estilizada */
+  font-weight: 400; /* Peso normal */
+  font-size: 64px; /* Tamanho grande */
+  color: #e76c07; /* Cor laranja */
+  line-height: 1.1; /* Espaçamento entre linhas */
+}
+
+/* Frase abaixo do nome */
+.conteudo-principal-escrito-subtitulo {
+  font-family: 'Sarala', sans-serif; /* Fonte secundária */
+  font-weight: 400; /* Peso normal */
+  font-size: 24px; /* Tamanho médio */
+  color: #e76c07; /* Cor laranja */
+}
+
+/* Botão (Instagram) */
+.conteudo-principal-escrito-botao {
+  background-color: #ECD6C4; /* Fundo bege claro */
+  width: 180px; /* Largura fixa */
+  height: 60px; /* Altura fixa */
+  border: none; /* Sem borda */
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25); /* Sombra para destacar */
+  border-radius: 20px; /* Bordas arredondadas */
+  font-family: 'Sarala', sans-serif; /* Fonte */
+  font-weight: 400; /* Peso normal */
+  font-size: 24px; /* Tamanho médio */
+  color: #2F2325; /* Cor do texto marrom escuro */
+  cursor: pointer; /* Cursor de mãozinha ao passar mouse */
+  transition: background 0.2s; /* Suaviza troca de fundo ao passar mouse */
+  display: flex; /* Centraliza texto verticalmente */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza texto */
+}
+
+/* Efeito ao passar mouse sobre o botão */
+.conteudo-principal-escrito-botao:hover {
+  background-color: rgba(236, 214, 196, 0.53); /* Fundo bege mais transparente */
+}
+
+/* Imagem principal (perfil) */
+.conteudo-principal-imagem {
+  height: 430px; /* Altura fixa */
+  width: 430px; /* Largura fixa */
+  border-radius: 50%; /* Imagem circular */
+  object-fit: cover; /* Garante que a imagem preencha o círculo */
+  background: #222; /* Fundo para caso a imagem seja menor */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* Sombra para destacar a imagem */
+}
+
+/* Área secundária: sobre, habilidades, projetos */
+.conteudo-secundario {
+  display: flex; /* Layout flexível vertical */
+  flex-direction: column; /* Elementos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 24px; /* Espaço entre blocos */
+  margin-top: 32px; /* Espaço acima */
+  max-width: 700px; /* Limite de largura */
+  width: 100%; /* Largura total */
+  margin-left: auto; /* Centraliza na tela */
+  margin-right: auto; /* Centraliza na tela */
+}
+
+/* Título de cada bloco secundário */
+.conteudo-secundario-titulo {
+  border-top: 0.4px solid #FFF2E7; /* Linha clara acima do título */
+  padding-top: 32px; /* Espaço acima do texto */
+  font-family: 'Righteous', cursive; /* Fonte estilizada */
+  font-weight: 400; /* Peso normal */
+  font-size: 24px; /* Tamanho médio */
+  color: #e76c07; /* Cor laranja */
+  margin-bottom: 16px; /* Espaço abaixo do título */
+  width: 100%; /* Largura total do bloco */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Parágrafo dos blocos secundários */
+.conteudo-secundario-paragrafo {
+  font-family: 'Sarala', sans-serif; /* Fonte secundária */
+  font-weight: 300; /* Peso leve */
+  font-size: 18px; /* Tamanho médio */
+  color: #e76c07; /* Cor laranja */
+  width: 100%; /* Largura total */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 4px; /* Espaço abaixo do parágrafo */
+}
+
+/* Bloco das listas de habilidades e projetos */
+.conteudo-lista {
+  width: 100%; /* Largura total */
+  text-align: center; /* Centraliza o bloco */
+}
+
+/* Listas de habilidades e projetos */
+.conteudo-secundario-lista {
+  font-family: 'Sarala', sans-serif; /* Fonte secundária */
+  font-size: 18px; /* Tamanho médio */
+  color: #e76c07; /* Cor laranja */
+  margin: 0 auto 16px auto; /* Centraliza e dá espaço abaixo */
+  display: inline-block; /* Permite centralizar com text-align */
+  text-align: left; /* Alinha os itens da lista à esquerda para leitura */
+}
+
+/* Espaço entre cada item da lista */
+.conteudo-secundario-lista li {
+  margin-bottom: 6px; /* Espaço abaixo de cada item */
+}
+
+/* Estiliza todos os links especiais (projetos, email, etc) */
+.conteudo-link {
+  color: #e76c07; /* Cor laranja */
+  text-decoration: underline; /* Sublinha o link */
+  font-weight: 700; /* Peso mais forte */
+  transition: color 0.2s; /* Suaviza troca de cor ao passar mouse */
+  word-break: break-all; /* Quebra o link para não ultrapassar o bloco */
+}
+
+/* Efeito ao passar mouse sobre links */
+.conteudo-link:hover {
+  color: #ffd19c; /* Muda cor para laranja claro */
+}
+
+/* Rodapé da página */
+.rodape {
+  padding: 32px 5vw; /* Espaço interno acima/abaixo 32px, lados 5% */
+  border-top: 0.4px solid #e76c07; /* Linha laranja fina acima do rodapé */
+  display: flex; /* Layout flexível vertical */
+  flex-direction: column; /* Elementos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 24px; /* Espaço entre elementos */
+  margin-top: 48px; /* Espaço acima do rodapé */
+  width: 100%; /* Largura total */
+}
+
+/* Bloco de conteúdo do rodapé */
+.rodape-conteudo {
+  width: 100%; /* Largura total */
+  max-width: 700px; /* Limite de largura */
+  margin-left: auto; /* Centraliza na tela */
+  margin-right: auto; /* Centraliza na tela */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Imagem do rodapé (logo) */
+.rodape-imagem {
+  height: 48px; /* Altura fixa */
+  display: block; /* Garante que seja bloco e não inline */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* ----------- Responsividade Tablets ----------- */
+@media (max-width: 1200px) {
+  .conteudo-principal {
+    gap: 32px; /* Diminui espaço entre texto e imagem */
+    padding: 32px 2vw; /* Reduz padding lateral */
+  }
+  .conteudo-principal-imagem {
+    height: 300px; /* Reduz tamanho da imagem */
+    width: 300px; /* Reduz tamanho da imagem */
+  }
+  .conteudo-principal-escrito-titulo {
+    font-size: 48px; /* Reduz tamanho do título no tablet */
+  }
+  .rodape, .cabecalho {
+    padding-left: 2vw; /* Reduz padding lateral */
+    padding-right: 2vw; /* Reduz padding lateral */
+  }
+}
+
+/* ----------- Responsividade Mobile ----------- */
+@media (max-width: 900px) {
+  body {
+    padding: 0 2vw; /* Reduz padding lateral do corpo */
+  }
+  .cabecalho {
+    flex-direction: column; /* Menu e logo empilhados verticalmente */
+    gap: 10px; /* Espaço entre logo e menu */
+    padding: 16px 0; /* Reduz padding */
+    width: 100%;
+    align-items: flex-start; /* Alinha à esquerda */
+  }
+  .cabecalho-imagem {
+    height: 48px; /* Reduz tamanho do logo */
+    margin-right: 0; /* Remove espaço à direita */
+  }
+  .cabecalho-menu {
+    flex-direction: column; /* Links empilhados */
+    gap: 10px; /* Espaço entre links */
+    align-items: flex-start; /* Alinha à esquerda */
+    width: 100%;
+    margin-left: 0; /* Remove alinhamento à direita */
+  }
+  .cabecalho-menu-item {
+    font-size: 15px; /* Reduz tamanho da fonte */
+    padding: 6px 0; /* Espaço vertical extra */
+    width: 100%; /* Ocupa largura total */
+    text-align: left; /* Alinha texto à esquerda */
+  }
+  .conteudo {
+    margin-bottom: 24px; /* Reduz espaço abaixo do conteúdo */
+    border-top: 0.4px solid #e76c07;
+    width: 100%;
+  }
+  .conteudo-principal {
+    flex-direction: column; /* Empilha texto e imagem */
+    gap: 24px; /* Espaço entre texto e imagem */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start;
+    padding: 18px 0; /* Reduz padding */
+    width: 100%;
+  }
+  .conteudo-principal-imagem {
+    order: -1; /* Coloca imagem acima do texto */
+    margin-bottom: 12px; /* Espaço abaixo da imagem */
+    height: 160px; /* Reduz tamanho da imagem */
+    width: 160px; /* Reduz tamanho da imagem */
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .conteudo-principal-escrito {
+    gap: 14px; /* Reduz espaço vertical */
+    width: 100%;
+    align-items: center;
+    max-width: 95vw; /* Limite de largura */
+    text-align: center;
+  }
+  .conteudo-principal-escrito-titulo {
+    font-size: 28px; /* Reduz tamanho do título */
+    text-align: center;
+    line-height: 1.15;
+  }
+  .conteudo-principal-escrito-subtitulo {
+    font-size: 15px; /* Reduz tamanho da frase */
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .conteudo-principal-escrito-botao {
+    width: 90vw; /* Botão ocupa quase toda a tela */
+    max-width: 220px; /* Limite de largura */
+    height: 40px; /* Reduz altura */
+    font-size: 16px; /* Reduz fonte */
+    margin: 0 auto; /* Centraliza botão */
+    display: block;
+  }
+  .conteudo-secundario {
+    gap: 12px; /* Reduz espaço entre blocos */
+    margin-top: 18px;
+    max-width: 98vw; /* Limite de largura */
+    padding: 0 2vw; /* Reduz padding lateral */
+  }
+  .conteudo-secundario-titulo {
+    font-size: 17px; /* Reduz tamanho do título */
+    padding-top: 10px; /* Reduz espaço acima */
+    margin-bottom: 6px;
+    text-align: center;
+    border-top: none; /* Remove linha superior */
+  }
+  .conteudo-secundario-paragrafo {
+    font-size: 13px; /* Reduz fonte */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2px;
+  }
+  .conteudo-lista {
+    width: 100%;
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .conteudo-secundario-lista {
+    font-size: 13px; /* Reduz fonte */
+    margin-left: 0;
+    margin-bottom: 8px;
+    display: inline-block;
+    text-align: left; /* Mantém alinhado à esquerda para leitura */
+  }
+  .rodape {
+    padding: 8px 0; /* Reduz padding */
+    gap: 8px;
+    font-size: 12px; /* Reduz fonte */
+    margin-top: 24px; /* Reduz espaço acima */
+    width: 100%;
+  }
+  .rodape-conteudo {
+    max-width: 98vw;
+    text-align: center;
+  }
+  .rodape-imagem {
+    height: 32px; /* Reduz tamanho do logo */
+  }
+}
+
+/* ----------- Imagens de Projetos ----------- */
+
+.projeto-imagens { /* Bloco que centraliza as imagens do projeto */
+  display: flex; /* Ativa o layout flexível */
+  flex-direction: column; /* Organiza os filhos (imagens) em coluna, um abaixo do outro */
+  align-items: center; /* Centraliza as imagens horizontalmente */
+  gap: 18px; /* Espaço entre as imagens, na vertical */
+  margin: 18px 0; /* Espaço acima e abaixo do bloco de imagens */
+}
+
+.projeto-imagens img { /* Estilo de cada imagem do projeto */
+  max-width: 320px; /* Limita largura máxima de cada imagem */
+  width: 100%; /* Imagem ocupa toda a largura disponível do pai */
+  border-radius: 12px; /* Cantos arredondados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Sombra leve */
+  background: #222; /* Fundo escuro se imagem for menor */
+  display: block; /* Garante que cada imagem fique em uma linha só */
+}
+
+@media (max-width: 900px) {
+  .projeto-imagens {
+    gap: 10px; /* Menor espaço entre imagens para telas pequenas */
+  }
+  .projeto-imagens img {
+    max-width: 98vw; /* Imagem ocupa quase toda largura da tela no mobile */
+  }
+}
+
+/* ----------- Mobile Pequeno ----------- */
+@media (max-width: 600px) {
+  .cabecalho {
+    flex-direction: column; /* Empilha logo e menu */
+    gap: 6px; /* Espaço pequeno entre itens */
+    padding: 8px 0; /* Reduz padding */
+    align-items: flex-start; /* Alinha à esquerda */
+  }
+  .cabecalho-menu {
+    flex-direction: column; /* Links empilhados */
+    gap: 6px; /* Espaço pequeno entre links */
+    align-items: flex-start; /* Alinha à esquerda */
+    width: 100%;
+  }
+  .cabecalho-menu-item {
+    font-size: 13px; /* Fonte pequena */
+    padding: 4px 0; /* Espaço vertical pequeno */
+    width: 100%;
+    text-align: left;
+  }
+  .conteudo-principal {
+    gap: 12px; /* Espaço pequeno entre texto e imagem */
+    padding: 8px 0; /* Reduz padding */
+  }
+  .conteudo-principal-imagem {
+    height: 90px; /* Imagem pequena */
+    width: 90px;
+    margin-bottom: 8px;
+  }
+  .conteudo-principal-escrito-titulo {
+    font-size: 18px; /* Título menor */
+  }
+  .conteudo-principal-escrito-subtitulo {
+    font-size: 10px; /* Frase menor */
+  }
+  .conteudo-principal-escrito-botao {
+    font-size: 11px; /* Fonte pequena */
+    height: 30px; /* Altura menor */
+    max-width: 120px;
+  }
+  .conteudo-secundario-titulo {
+    font-size: 13px; /* Título pequeno */
+    padding-top: 6px; /* Espaço acima menor */
+  }
+  .conteudo-secundario-paragrafo,
+  .conteudo-secundario-lista {
+    font-size: 10px; /* Fonte pequena nas listas e parágrafos */
+  }
+  .rodape {
+    padding: 4px 0; /* Padding mínimo */
+    gap: 4px;
+    font-size: 10px; /* Fonte pequena */
+  }
+  .rodape-imagem {
+    height: 18px; /* Logo pequeno */
+  }
+}
+
