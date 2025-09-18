@@ -392,7 +392,7 @@ img {
 }
 
 .projeto-imagens img { /* Estilo de cada imagem do projeto */
-  max-width: 320px; /* Limita largura máxima de cada imagem */
+  max-width: 900px; /* Limita largura máxima de cada imagem (dobro do anterior, ideal para desktop) */
   width: 100%; /* Imagem ocupa toda a largura disponível do pai */
   border-radius: 12px; /* Cantos arredondados */
   box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Sombra leve */
